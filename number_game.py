@@ -31,7 +31,7 @@ def start_game():
                 try_count +=1
                 print("Nice try! The number is actually lower!")
                 if try_count < 2:
-                    print("that was your first attempt")
+                    print("That was your first attempt")
                 else:          
                     print("You have tried {} times".format(try_count))   
             elif player_choice > comp_choice:
@@ -40,7 +40,14 @@ def start_game():
                 if try_count < 2:
                     print("that was your first attempt")
                 else:          
-                    print("You have tried {} times".format(try_count))   
+                    print("You have tried {} times".format(try_count))
+            elif player_choice < comp_choice:
+                try_count +=1
+                print("Nice try! The number is actually higher!")
+                if try_count < 2:
+                    print("that was your first attempt")
+                else:          
+                    print("You have tried {} times".format(try_count))
             else: 
                 try_count +=1
                 if HIGH_SCORE == 0:
