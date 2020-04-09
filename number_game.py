@@ -52,15 +52,12 @@ def start_game():
                 try_count +=1
                 if HIGH_SCORE == 0:
                     HIGH_SCORE = try_count
-                elif HIGH_SCORE < try_count and HIGH_SCORE > 0:
+                elif HIGH_SCORE > try_count and HIGH_SCORE > 0:
                     HIGH_SCORE = try_count                    
                 if try_count == 1:
                     print("Wow you got it on your first try! It can't get better than that!")
                 else:
-                    print("Wow you got it!, it took you {} tries".format(try_count))
-    #            print("Your best score is {} attempts".format(HIGH_SCORE))
-    #            if try_count < HIGH_SCORE:
-    #                HIGH_SCORE = try_count        
+                    print("Wow you got it!, it took you {} tries".format(try_count))   
                 new_game = input("If you would like to play again? Type in 'YES' : ")
                 if new_game == "YES":
                     start_game()
